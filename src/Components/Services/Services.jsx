@@ -5,15 +5,21 @@ import HeartEmoji from '../../img/heartemoji.png'
 import Glasses from '../../img/glasses.png'
 import Humble from '../../img/humble.png'
 /*import Resume from './fake-resume.pdf'*/
+import { themeContext } from '../../Context'
+import { useContext } from "react";
 
 
 function Services() {
+
+    const theme= useContext(themeContext);
+    const darkMode=theme.state.darkMode;
+
   return (
     <div className="services">
 
         {/*côté gauche*/}
         <div className="awesome">
-            <span>My Awesome</span>
+            <span style= {{color: darkMode? 'white' : ''}}>My Awesome</span>
             <span>services</span>
             <span>Lorem Ipsum is simply dummy text of the printing of the printing Lorem
                 <br/>
